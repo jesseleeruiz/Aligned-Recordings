@@ -25,6 +25,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
                                 </state>
+                                <connections>
+                                    <action selector="recordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uRS-xw-cJr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhy-x3-ycw">
                                 <rect key="frame" x="218.5" y="792" width="175.5" height="50"/>
@@ -39,6 +42,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="21"/>
                                 </state>
+                                <connections>
+                                    <action selector="importButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iuE-Kg-oVI"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PcR-gC-ma1">
                                 <rect key="frame" x="20" y="160" width="374" height="614"/>
@@ -51,6 +57,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="I5Y-vs-zvr" kind="show" identifier="showTranscriptDetail" id="SWm-3y-fYf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -76,10 +85,31 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Your Transcriptions" id="xdd-EY-tus"/>
+                    <connections>
+                        <outlet property="importButton" destination="lhy-x3-ycw" id="eeZ-ZK-s1x"/>
+                        <outlet property="recordButton" destination="NF9-Y9-jep" id="LFn-kP-ZOH"/>
+                        <outlet property="tableView" destination="PcR-gC-ma1" id="8kQ-d9-ybr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="115.84821428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="z8M-e4-PBj">
+            <objects>
+                <viewController id="I5Y-vs-zvr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="62z-Ac-egX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="zx2-QH-rKw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fzt-g0-bFF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V51-qk-F8e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1993" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q35-g1-sMb">
