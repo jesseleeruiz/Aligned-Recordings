@@ -5,8 +5,9 @@
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="text" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="transcriptid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
     </entity>
     <elements>
-        <element name="Transcript" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Transcript" positionX="-63" positionY="-18" width="128" height="118"/>
     </elements>
 </model>

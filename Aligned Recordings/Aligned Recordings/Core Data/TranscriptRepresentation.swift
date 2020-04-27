@@ -9,8 +9,9 @@
 import Foundation
 
 struct TranscriptRepresentation: Codable {
-    var title: String
-    var date: Date
-    var text: String
-    var audioFile: String
+    let title: String
+    let date: Date
+    let transcriptid: UUID
+    let text: String
+    let audioFile: String
 }
