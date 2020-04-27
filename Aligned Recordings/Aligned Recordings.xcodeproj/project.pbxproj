@@ -11,6 +11,8 @@
 		801B23132456A9890090F613 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801B23122456A9890090F613 /* CoreDataStack.swift */; };
 		801B23152456AAF80090F613 /* Transcript+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801B23142456AAF80090F613 /* Transcript+Convenience.swift */; };
 		801B23172456AB500090F613 /* TranscriptRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801B23162456AB500090F613 /* TranscriptRepresentation.swift */; };
+		801B231B245747900090F613 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 801B231A245747900090F613 /* CloudKit.framework */; };
+		801B232124574B440090F613 /* TranscriptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801B232024574B440090F613 /* TranscriptController.swift */; };
 		809A75642453D38300D97E13 /* TranscriptDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809A75632453D38300D97E13 /* TranscriptDetailViewController.swift */; };
 		80F15EB524538DA8004D76BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F15EB424538DA8004D76BD /* AppDelegate.swift */; };
 		80F15EB724538DA8004D76BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F15EB624538DA8004D76BD /* SceneDelegate.swift */; };
@@ -26,6 +28,9 @@
 		801B23122456A9890090F613 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		801B23142456AAF80090F613 /* Transcript+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transcript+Convenience.swift"; sourceTree = "<group>"; };
 		801B23162456AB500090F613 /* TranscriptRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptRepresentation.swift; sourceTree = "<group>"; };
+		801B23182457478A0090F613 /* Aligned Recordings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Aligned Recordings.entitlements"; sourceTree = "<group>"; };
+		801B231A245747900090F613 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		801B232024574B440090F613 /* TranscriptController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptController.swift; sourceTree = "<group>"; };
 		809A75632453D38300D97E13 /* TranscriptDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptDetailViewController.swift; sourceTree = "<group>"; };
 		80F15EB124538DA8004D76BD /* Aligned Recordings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aligned Recordings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F15EB424538DA8004D76BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,17 +48,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				801B231B245747900090F613 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		801B2319245747900090F613 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				801B231A245747900090F613 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		801B231D24574AFB0090F613 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				80F15EB824538DA8004D76BD /* ViewController.swift */,
+				809A75632453D38300D97E13 /* TranscriptDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		801B231E24574B060090F613 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				801B231024569F4B0090F613 /* TranscriptTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		801B231F24574B110090F613 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				80F15EBD24538DA8004D76BD /* Aligned_Recordings.xcdatamodeld */,
+				801B23122456A9890090F613 /* CoreDataStack.swift */,
+				801B23142456AAF80090F613 /* Transcript+Convenience.swift */,
+				801B23162456AB500090F613 /* TranscriptRepresentation.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		801B232224574B4D0090F613 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				801B232024574B440090F613 /* TranscriptController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
 		80F15EA824538DA8004D76BD = {
 			isa = PBXGroup;
 			children = (
 				80F15EB324538DA8004D76BD /* Aligned Recordings */,
 				80F15EB224538DA8004D76BD /* Products */,
+				801B2319245747900090F613 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,19 +119,17 @@
 		80F15EB324538DA8004D76BD /* Aligned Recordings */ = {
 			isa = PBXGroup;
 			children = (
+				801B23182457478A0090F613 /* Aligned Recordings.entitlements */,
+				801B231F24574B110090F613 /* Core Data */,
+				801B231D24574AFB0090F613 /* View Controllers */,
+				801B231E24574B060090F613 /* Views */,
+				801B232224574B4D0090F613 /* Model Controller */,
 				80F15EB424538DA8004D76BD /* AppDelegate.swift */,
 				80F15EB624538DA8004D76BD /* SceneDelegate.swift */,
-				80F15EB824538DA8004D76BD /* ViewController.swift */,
-				809A75632453D38300D97E13 /* TranscriptDetailViewController.swift */,
-				801B231024569F4B0090F613 /* TranscriptTableViewCell.swift */,
-				80F15EBD24538DA8004D76BD /* Aligned_Recordings.xcdatamodeld */,
-				801B23122456A9890090F613 /* CoreDataStack.swift */,
 				80F15EBA24538DA8004D76BD /* Main.storyboard */,
 				80F15EC024538DAC004D76BD /* Assets.xcassets */,
 				80F15EC224538DAC004D76BD /* LaunchScreen.storyboard */,
 				80F15EC524538DAC004D76BD /* Info.plist */,
-				801B23142456AAF80090F613 /* Transcript+Convenience.swift */,
-				801B23162456AB500090F613 /* TranscriptRepresentation.swift */,
 			);
 			path = "Aligned Recordings";
 			sourceTree = "<group>";
@@ -165,6 +214,7 @@
 				809A75642453D38300D97E13 /* TranscriptDetailViewController.swift in Sources */,
 				80F15EBF24538DA8004D76BD /* Aligned_Recordings.xcdatamodeld in Sources */,
 				80F15EB724538DA8004D76BD /* SceneDelegate.swift in Sources */,
+				801B232124574B440090F613 /* TranscriptController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +358,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Aligned Recordings/Aligned Recordings.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5792949ZYF;
 				INFOPLIST_FILE = "Aligned Recordings/Info.plist";
@@ -327,6 +378,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Aligned Recordings/Aligned Recordings.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5792949ZYF;
 				INFOPLIST_FILE = "Aligned Recordings/Info.plist";
