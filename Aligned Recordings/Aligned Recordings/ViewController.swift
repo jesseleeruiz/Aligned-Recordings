@@ -11,13 +11,14 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: - Properties
+    var array: [String] = ["Meet with Jen", "Conference Call", "1:1 with Tyler"]
     
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var importButton: UIButton!
-
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,14 +41,19 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return array.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Transcript", for: indexPath)
+        cell.textLabel?.text = array[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -58,3 +64,4 @@ extension ViewController: UITableViewDataSource {
         
     }
 }
+
