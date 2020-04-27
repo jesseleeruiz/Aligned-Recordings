@@ -10,13 +10,33 @@ import UIKit
 
 class TranscriptDetailViewController: UIViewController {
     
+    // MARK: - Properties
+    
+    
+    // MARK: - Outlets
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var exportButton: UIButton!
+    
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
+    // MARK: - Actions
+    @IBAction func playAudioRecording(_ sender: UIBarButtonItem) {
+        
+    }
+    
+    @IBAction func exportButtonPressed(_ sender: UIButton) {
+        
+    }
+    
+    // MARK: - Methods
 
+    
     /*
     // MARK: - Navigation
 

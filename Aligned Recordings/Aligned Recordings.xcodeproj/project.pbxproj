@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		801B231124569F4B0090F613 /* TranscriptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801B231024569F4B0090F613 /* TranscriptTableViewCell.swift */; };
 		809A75642453D38300D97E13 /* TranscriptDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809A75632453D38300D97E13 /* TranscriptDetailViewController.swift */; };
 		80F15EB524538DA8004D76BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F15EB424538DA8004D76BD /* AppDelegate.swift */; };
 		80F15EB724538DA8004D76BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F15EB624538DA8004D76BD /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		801B231024569F4B0090F613 /* TranscriptTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptTableViewCell.swift; sourceTree = "<group>"; };
 		809A75632453D38300D97E13 /* TranscriptDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptDetailViewController.swift; sourceTree = "<group>"; };
 		80F15EB124538DA8004D76BD /* Aligned Recordings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aligned Recordings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F15EB424538DA8004D76BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				80F15EC524538DAC004D76BD /* Info.plist */,
 				80F15EBD24538DA8004D76BD /* Aligned_Recordings.xcdatamodeld */,
 				809A75632453D38300D97E13 /* TranscriptDetailViewController.swift */,
+				801B231024569F4B0090F613 /* TranscriptTableViewCell.swift */,
 			);
 			path = "Aligned Recordings";
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80F15EB924538DA8004D76BD /* ViewController.swift in Sources */,
+				801B231124569F4B0090F613 /* TranscriptTableViewCell.swift in Sources */,
 				80F15EB524538DA8004D76BD /* AppDelegate.swift in Sources */,
 				809A75642453D38300D97E13 /* TranscriptDetailViewController.swift in Sources */,
 				80F15EBF24538DA8004D76BD /* Aligned_Recordings.xcdatamodeld in Sources */,

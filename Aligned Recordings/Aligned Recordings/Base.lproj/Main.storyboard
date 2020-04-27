@@ -50,7 +50,7 @@
                                 <rect key="frame" x="0.0" y="160" width="394" height="614"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Transcript" id="l6T-L2-78D">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Transcript" id="l6T-L2-78D" customClass="TranscriptTableViewCell" customModule="Aligned_Recordings" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="394" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l6T-L2-78D" id="34C-IA-7oV">
@@ -128,6 +128,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="exportButtonPressed:" destination="I5Y-vs-zvr" eventType="touchUpInside" id="5a0-OQ-d0x"/>
                                     <action selector="importButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aps-J8-bl7"/>
                                 </connections>
                             </button>
@@ -171,8 +172,17 @@
                         <viewLayoutGuide key="safeArea" id="zx2-QH-rKw"/>
                     </view>
                     <navigationItem key="navigationItem" id="Fzt-g0-bFF">
-                        <barButtonItem key="rightBarButtonItem" image="play.circle.fill" catalog="system" landscapeImage="play.circle.fill" largeContentSizeImage="play.circle.fill" id="4ZU-aN-VQ2"/>
+                        <barButtonItem key="rightBarButtonItem" image="play.circle.fill" catalog="system" landscapeImage="play.circle.fill" largeContentSizeImage="play.circle.fill" id="4ZU-aN-VQ2">
+                            <connections>
+                                <action selector="playAudioRecording:" destination="I5Y-vs-zvr" id="6MD-FL-drb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="exportButton" destination="hI3-QI-iCp" id="5YO-Pj-9kj"/>
+                        <outlet property="pickerView" destination="NWF-gS-NGD" id="EDh-6n-FKb"/>
+                        <outlet property="textView" destination="TIy-RM-01R" id="ni3-MP-Cpl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V51-qk-F8e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
