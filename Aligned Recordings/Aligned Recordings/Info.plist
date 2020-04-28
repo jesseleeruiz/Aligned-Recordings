@@ -65,5 +65,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>$(PRODUCT_NAME) would like to use Speech Recognition to determine which words you speak into the device&apos;s microphone.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>$(PRODUCT_NAME) would like to use your microphone to record your speech when you press the &quot;Record&quot; button.</string>
 </dict>
 </plist>
