@@ -18,8 +18,8 @@ class CoreDataStack {
         return container.viewContext
     }
     
-    let container: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "Aligned_Recordings" as String)
+    lazy var container: NSPersistentCloudKitContainer = {
+        let container = NSPersistentCloudKitContainer(name: "Aligned_Recordings" as String)
         container.loadPersistentStores() { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Failed to load persistent stores: \(error), \(error.userInfo)")

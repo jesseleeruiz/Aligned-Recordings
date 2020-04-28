@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import CloudKit
 
 class ViewController: UIViewController {
     
     // MARK: - Properties
     var array: [String] = ["Meet with Jen", "Conference Call", "1:1 with Tyler"]
+    var transcripts = [CKRecord]()
     
     
     // MARK: - Outlets

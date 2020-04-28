@@ -11,7 +11,6 @@ import Foundation
 struct TranscriptRepresentation: Codable {
     let title: String
     let date: Date
-    let transcriptid: UUID
     let text: String
     let audioFile: String
 }
