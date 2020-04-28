@@ -15,39 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF9-Y9-jep">
-                                <rect key="frame" x="20" y="794" width="178.5" height="48"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration" hint="Start recording your voice" label="Record Audio"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="RECORD" image="mic.fill" catalog="system">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
-                                </state>
-                                <connections>
-                                    <action selector="recordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uRS-xw-cJr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhy-x3-ycw">
-                                <rect key="frame" x="218.5" y="792" width="175.5" height="50"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration" hint="Import an audio file from your phone" label="Import Audio"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ZAJ-9O-8gf"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="IMPORT" image="square.and.arrow.down.fill" catalog="system">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="21"/>
-                                </state>
-                                <connections>
-                                    <action selector="importButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iuE-Kg-oVI"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PcR-gC-ma1">
-                                <rect key="frame" x="0.0" y="160" width="394" height="614"/>
+                                <rect key="frame" x="0.0" y="108" width="394" height="788"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Transcript" id="l6T-L2-78D" customClass="TranscriptTableViewCell" customModule="Aligned_Recordings" customModuleProvider="target">
@@ -71,29 +40,105 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="PcR-gC-ma1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="4HA-6j-nlf"/>
-                            <constraint firstItem="lhy-x3-ycw" firstAttribute="leading" secondItem="NF9-Y9-jep" secondAttribute="trailing" constant="20" id="MU3-Dz-LNO"/>
-                            <constraint firstItem="NF9-Y9-jep" firstAttribute="top" secondItem="PcR-gC-ma1" secondAttribute="bottom" constant="20" id="Oze-nQ-zEy"/>
-                            <constraint firstItem="lhy-x3-ycw" firstAttribute="height" secondItem="NF9-Y9-jep" secondAttribute="height" multiplier="1.04082" id="RR2-Xt-34x"/>
-                            <constraint firstItem="lhy-x3-ycw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="Rvm-vS-x3g"/>
-                            <constraint firstItem="lhy-x3-ycw" firstAttribute="width" secondItem="NF9-Y9-jep" secondAttribute="width" multiplier="0.983696" id="Tfd-vy-LW3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PcR-gC-ma1" secondAttribute="trailing" constant="20" id="ZaX-ft-00M"/>
                             <constraint firstItem="PcR-gC-ma1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aD5-QZ-YSB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lhy-x3-ycw" secondAttribute="trailing" constant="20" id="gIM-uu-EzD"/>
-                            <constraint firstItem="NF9-Y9-jep" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="qRA-Dj-XTw"/>
-                            <constraint firstItem="NF9-Y9-jep" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="s1q-47-6Il"/>
+                            <constraint firstAttribute="bottom" secondItem="PcR-gC-ma1" secondAttribute="bottom" id="hRH-YT-dYE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Your Transcriptions" id="xdd-EY-tus"/>
+                    <navigationItem key="navigationItem" title="Your Transcriptions" id="xdd-EY-tus">
+                        <barButtonItem key="rightBarButtonItem" largeContentSizeImage="plus" catalog="system" systemItem="add" id="5nk-dy-4Gc">
+                            <connections>
+                                <segue destination="hZc-UI-wIr" kind="show" identifier="addTranscript" id="GCK-fI-RYT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="importButton" destination="lhy-x3-ycw" id="eeZ-ZK-s1x"/>
-                        <outlet property="recordButton" destination="NF9-Y9-jep" id="LFn-kP-ZOH"/>
                         <outlet property="tableView" destination="PcR-gC-ma1" id="8kQ-d9-ybr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="115.84821428571428"/>
+        </scene>
+        <!--Add Transcript View Controller-->
+        <scene sceneID="FHT-rx-UnG">
+            <objects>
+                <viewController id="hZc-UI-wIr" customClass="AddTranscriptViewController" customModule="Aligned_Recordings" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wIP-gS-mpe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="VAI-rt-hTa">
+                                <rect key="frame" x="20" y="796.5" width="374" height="45.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF9-Y9-jep">
+                                        <rect key="frame" x="0.0" y="0.0" width="168.5" height="45.5"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Start recording your voice" label="Record Audio"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="RECORD" image="mic.fill" catalog="system">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="recordButtonPressed:" destination="hZc-UI-wIr" eventType="touchUpInside" id="VXe-GU-ZQK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhy-x3-ycw">
+                                        <rect key="frame" x="208.5" y="0.0" width="165.5" height="45.5"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Import an audio file from your phone" label="Import Audio"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="IMPORT" image="square.and.arrow.down.fill" catalog="system">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="21"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="importButtonPressed:" destination="hZc-UI-wIr" eventType="touchUpInside" id="EgV-kI-Kc4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="NF9-Y9-jep" firstAttribute="width" secondItem="lhy-x3-ycw" secondAttribute="width" multiplier="1.01657" id="Q62-WW-XDb"/>
+                                    <constraint firstItem="lhy-x3-ycw" firstAttribute="leading" secondItem="NF9-Y9-jep" secondAttribute="trailing" constant="40" id="pPx-fd-lOc"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b9C-U7-sDR">
+                                <rect key="frame" x="20" y="140" width="374" height="636.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <accessibility key="accessibilityConfiguration" hint="Where your text is displayed" label="Text View"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="b9C-U7-sDR" firstAttribute="top" secondItem="3w6-NE-E0l" secondAttribute="top" id="Qaj-XI-CX7"/>
+                            <constraint firstItem="3w6-NE-E0l" firstAttribute="trailing" secondItem="VAI-rt-hTa" secondAttribute="trailing" constant="20" id="RBs-U4-uyO"/>
+                            <constraint firstItem="3w6-NE-E0l" firstAttribute="bottom" secondItem="VAI-rt-hTa" secondAttribute="bottom" constant="20" id="V0S-a3-lUr"/>
+                            <constraint firstItem="VAI-rt-hTa" firstAttribute="leading" secondItem="3w6-NE-E0l" secondAttribute="leading" constant="20" id="ZDk-Hu-Bgv"/>
+                            <constraint firstItem="VAI-rt-hTa" firstAttribute="height" secondItem="wIP-gS-mpe" secondAttribute="height" multiplier="0.0284598" constant="20" id="abg-Rn-QG3"/>
+                            <constraint firstItem="b9C-U7-sDR" firstAttribute="trailing" secondItem="3w6-NE-E0l" secondAttribute="trailing" constant="-20" id="agY-rZ-iKA"/>
+                            <constraint firstItem="b9C-U7-sDR" firstAttribute="leading" secondItem="3w6-NE-E0l" secondAttribute="leading" constant="20" id="gmM-Qo-PGi"/>
+                            <constraint firstItem="VAI-rt-hTa" firstAttribute="top" secondItem="b9C-U7-sDR" secondAttribute="bottom" constant="20" id="pQC-K4-Xea"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3w6-NE-E0l"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xcK-7t-TuF"/>
+                    <connections>
+                        <outlet property="importButton" destination="lhy-x3-ycw" id="TOJ-Lu-0qh"/>
+                        <outlet property="recordButton" destination="NF9-Y9-jep" id="Qdd-Iv-4Wl"/>
+                        <outlet property="textview" destination="b9C-U7-sDR" id="Xn7-Se-J3X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n6Z-Eh-4Q8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1992.753623188406" y="-601.33928571428567"/>
         </scene>
         <!--Transcript Detail View Controller-->
         <scene sceneID="z8M-e4-PBj">
@@ -107,7 +152,7 @@
                                 <rect key="frame" x="20" y="140" width="374" height="473"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <accessibility key="accessibilityConfiguration" hint="Where your text is displayed" label="Text View"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -210,6 +255,7 @@
     <resources>
         <image name="mic.fill" catalog="system" width="108" height="128"/>
         <image name="play.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
     </resources>
 </document>

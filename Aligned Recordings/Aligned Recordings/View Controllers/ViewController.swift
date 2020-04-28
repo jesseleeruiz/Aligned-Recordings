@@ -12,14 +12,10 @@ import CloudKit
 class ViewController: UIViewController {
     
     // MARK: - Properties
-    var array: [String] = ["Meet with Jen", "Conference Call", "1:1 with Tyler"]
-    var transcripts = [CKRecord]()
-    
+    var array: [String] = ["Meet with Jen", "Conference Call", "1:1 with Tyler"]    
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var recordButton: UIButton!
-    @IBOutlet weak var importButton: UIButton!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -28,18 +24,11 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Actions
-    @IBAction func recordButtonPressed(_ sender: UIButton) {
-        
-    }
     
-    @IBAction func importButtonPressed(_ sender: UIButton) {
-        
-    }
     
     // MARK: - Methods
     private func updateViews() {
-        recordButton.layer.cornerRadius = 16
-        importButton.layer.cornerRadius = 16
+        
     }
 }
 
