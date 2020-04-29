@@ -17,7 +17,7 @@ class TranscriptDetailViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     
     
-    // MARK: - Lifecycle
+    // MARK: - View Controller Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
