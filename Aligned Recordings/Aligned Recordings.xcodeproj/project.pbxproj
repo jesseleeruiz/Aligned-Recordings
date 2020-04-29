@@ -15,6 +15,8 @@
 		801B232124574B440090F613 /* TranscriptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801B232024574B440090F613 /* TranscriptController.swift */; };
 		80639C1E2458D76E006F8FC2 /* AddTranscriptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80639C1D2458D76E006F8FC2 /* AddTranscriptViewController.swift */; };
 		80639C2024590A6A006F8FC2 /* PDFPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80639C1F24590A6A006F8FC2 /* PDFPreviewViewController.swift */; };
+		80639C22245A0069006F8FC2 /* Date+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80639C21245A0069006F8FC2 /* Date+EXT.swift */; };
+		80639C24245A00C0006F8FC2 /* String+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80639C23245A00C0006F8FC2 /* String+EXT.swift */; };
 		809A75642453D38300D97E13 /* TranscriptDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809A75632453D38300D97E13 /* TranscriptDetailViewController.swift */; };
 		80F15EB524538DA8004D76BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F15EB424538DA8004D76BD /* AppDelegate.swift */; };
 		80F15EB724538DA8004D76BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F15EB624538DA8004D76BD /* SceneDelegate.swift */; };
@@ -35,6 +37,8 @@
 		801B232024574B440090F613 /* TranscriptController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptController.swift; sourceTree = "<group>"; };
 		80639C1D2458D76E006F8FC2 /* AddTranscriptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTranscriptViewController.swift; sourceTree = "<group>"; };
 		80639C1F24590A6A006F8FC2 /* PDFPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFPreviewViewController.swift; sourceTree = "<group>"; };
+		80639C21245A0069006F8FC2 /* Date+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+EXT.swift"; sourceTree = "<group>"; };
+		80639C23245A00C0006F8FC2 /* String+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+EXT.swift"; sourceTree = "<group>"; };
 		809A75632453D38300D97E13 /* TranscriptDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptDetailViewController.swift; sourceTree = "<group>"; };
 		80F15EB124538DA8004D76BD /* Aligned Recordings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aligned Recordings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F15EB424538DA8004D76BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,15 @@
 			path = "Model Controller";
 			sourceTree = "<group>";
 		};
+		80639C25245A014D006F8FC2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				80639C21245A0069006F8FC2 /* Date+EXT.swift */,
+				80639C23245A00C0006F8FC2 /* String+EXT.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		80F15EA824538DA8004D76BD = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +143,7 @@
 				801B231D24574AFB0090F613 /* View Controllers */,
 				801B231E24574B060090F613 /* Views */,
 				801B232224574B4D0090F613 /* Model Controller */,
+				80639C25245A014D006F8FC2 /* Extensions */,
 				80F15EB424538DA8004D76BD /* AppDelegate.swift */,
 				80F15EB624538DA8004D76BD /* SceneDelegate.swift */,
 				80F15EBA24538DA8004D76BD /* Main.storyboard */,
@@ -217,7 +231,9 @@
 				801B231124569F4B0090F613 /* TranscriptTableViewCell.swift in Sources */,
 				80F15EB524538DA8004D76BD /* AppDelegate.swift in Sources */,
 				801B23172456AB500090F613 /* TranscriptRepresentation.swift in Sources */,
+				80639C24245A00C0006F8FC2 /* String+EXT.swift in Sources */,
 				809A75642453D38300D97E13 /* TranscriptDetailViewController.swift in Sources */,
+				80639C22245A0069006F8FC2 /* Date+EXT.swift in Sources */,
 				80F15EBF24538DA8004D76BD /* Aligned_Recordings.xcdatamodeld in Sources */,
 				80639C2024590A6A006F8FC2 /* PDFPreviewViewController.swift in Sources */,
 				80639C1E2458D76E006F8FC2 /* AddTranscriptViewController.swift in Sources */,
