@@ -10,7 +10,7 @@ import Foundation
 
 struct TranscriptRepresentation: Codable {
     let title: String
-    let date: Date
+    let date: String
     let text: String
     let audioFile: String
 }

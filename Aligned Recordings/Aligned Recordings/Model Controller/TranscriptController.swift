@@ -16,11 +16,11 @@ class TranscriptController {
     var transcript = Transcript()
     
     // MARK: - Methods
-    func createTranscript(with title: String, date: Date, text: String, audioFile: String, context: NSManagedObjectContext) {
+    func createTranscript(with title: String, text: String, context: NSManagedObjectContext) {
         CoreDataStack.shared.save(context: context)
     }
     
-    func updateTranscript(transcript: Transcript, with title: String, date: Date, text: String, audioFile: String, context: NSManagedObjectContext) {
+    func updateTranscript(transcript: Transcript, with title: String, date: String, text: String, audioFile: String, context: NSManagedObjectContext) {
         transcript.title = title
         transcript.date = date
         transcript.text = text

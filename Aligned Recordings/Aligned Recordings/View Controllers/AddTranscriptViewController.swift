@@ -12,6 +12,8 @@ import Speech
 class AddTranscriptViewController: UIViewController, SFSpeechRecognizerDelegate {
     
     // MARK: - Properties
+    var transcriptController: TranscriptController?
+    
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))!
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
@@ -20,12 +22,12 @@ class AddTranscriptViewController: UIViewController, SFSpeechRecognizerDelegate 
     // MARK: - Outlets
     @IBOutlet weak var textview: UITextView!
     @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var transcriptTitle: UITextField!
     
     // MARK: - View Controller Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        recordButton.isEnabled = false
-        recordButton.layer.cornerRadius = 16
+        updateViews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -93,16 +95,23 @@ class AddTranscriptViewController: UIViewController, SFSpeechRecognizerDelegate 
                 self.recordButton.setTitle("Start Recording", for: [])
             }
         }
-        
         let recordingFormat = inputNode.outputFormat(forBus: 0)
         inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer: AVAudioPCMBuffer, when: AVAudioTime) in
             self.recognitionRequest?.append(buffer)
         }
-        
         audioEngine.prepare()
         try audioEngine.start()
-        
         textview.text = "(Go ahead, I'm listening)"
+    }
+    
+    func updateViews() {
+        title = "Create Transcript"
+        recordButton.isEnabled = false
+        recordButton.layer.cornerRadius = 10
+        
+        textview.layer.borderColor = UIColor.systemGray2.cgColor
+        textview.layer.borderWidth = 0.5
+        textview.layer.cornerRadius = 4.0
     }
     
     // MARK: - SFSpeechRecognizerDelegate
@@ -131,15 +140,18 @@ class AddTranscriptViewController: UIViewController, SFSpeechRecognizerDelegate 
             }
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+           guard let transcriptController = transcriptController else { return }
+        if let title = transcriptTitle.text,
+            let text = textview.text {
+            transcriptController.createTranscript(with: title, text: text, context: CoreDataStack.shared.mainContext)
+        } else {
+            let alert = UIAlertController(title: "All Information Not Provided", message: "You must supply all information.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        navigationController?.popViewController(animated: true)
     }
-    */
-
 }

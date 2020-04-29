@@ -19,7 +19,7 @@ extension Transcript {
     }
     
     @discardableResult convenience init(title: String,
-                                        date: Date = Date.init(timeIntervalSinceNow: 0),
+                                        date: String,
                                         text: String,
                                         audioFile: String,
                                         context: NSManagedObjectContext) {

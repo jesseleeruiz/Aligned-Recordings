@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Your Transcriptions-->
+        <!--Your Transcripts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Aligned_Recordings" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,7 +62,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Your Transcriptions" id="xdd-EY-tus">
+                    <navigationItem key="navigationItem" title="Your Transcripts" id="xdd-EY-tus">
                         <barButtonItem key="rightBarButtonItem" largeContentSizeImage="plus" catalog="system" systemItem="add" id="5nk-dy-4Gc">
                             <connections>
                                 <segue destination="hZc-UI-wIr" kind="show" identifier="addTranscript" id="GCK-fI-RYT"/>
@@ -85,54 +85,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="VAI-rt-hTa">
-                                <rect key="frame" x="20" y="796.5" width="374" height="45.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF9-Y9-jep">
+                                <rect key="frame" x="20" y="826" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" hint="Start recording your voice" label="Record Audio"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FVV-Ir-eAv"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="RECORD" image="mic.fill" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordButtonPressed:" destination="hZc-UI-wIr" eventType="touchUpInside" id="VXe-GU-ZQK"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CKS-40-5pe">
+                                <rect key="frame" x="20" y="140" width="374" height="34"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF9-Y9-jep">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="45.5"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <accessibility key="accessibilityConfiguration" hint="Start recording your voice" label="Record Audio"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="RECORD" image="mic.fill" catalog="system">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="recordButtonPressed:" destination="hZc-UI-wIr" eventType="touchUpInside" id="VXe-GU-ZQK"/>
-                                        </connections>
-                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbI-68-AwB">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="34"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a title here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rky-Cw-3DJ">
+                                        <rect key="frame" x="68" y="0.0" width="306" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b9C-U7-sDR">
-                                <rect key="frame" x="20" y="140" width="374" height="636.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="When you start recording your text will appear here." adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b9C-U7-sDR">
+                                <rect key="frame" x="20" y="200" width="374" height="606"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <accessibility key="accessibilityConfiguration" hint="Where your text is displayed" label="Text View"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="b9C-U7-sDR" firstAttribute="top" secondItem="3w6-NE-E0l" secondAttribute="top" id="Qaj-XI-CX7"/>
-                            <constraint firstItem="3w6-NE-E0l" firstAttribute="trailing" secondItem="VAI-rt-hTa" secondAttribute="trailing" constant="20" id="RBs-U4-uyO"/>
-                            <constraint firstItem="3w6-NE-E0l" firstAttribute="bottom" secondItem="VAI-rt-hTa" secondAttribute="bottom" constant="20" id="V0S-a3-lUr"/>
-                            <constraint firstItem="VAI-rt-hTa" firstAttribute="leading" secondItem="3w6-NE-E0l" secondAttribute="leading" constant="20" id="ZDk-Hu-Bgv"/>
-                            <constraint firstItem="VAI-rt-hTa" firstAttribute="height" secondItem="wIP-gS-mpe" secondAttribute="height" multiplier="0.0284598" constant="20" id="abg-Rn-QG3"/>
+                            <constraint firstItem="CKS-40-5pe" firstAttribute="top" secondItem="3w6-NE-E0l" secondAttribute="top" id="0fq-C5-QW1"/>
+                            <constraint firstItem="CKS-40-5pe" firstAttribute="leading" secondItem="3w6-NE-E0l" secondAttribute="leading" constant="20" id="3cV-bL-rO3"/>
+                            <constraint firstItem="NF9-Y9-jep" firstAttribute="leading" secondItem="b9C-U7-sDR" secondAttribute="leading" id="Btz-QD-HMz"/>
+                            <constraint firstAttribute="bottom" secondItem="NF9-Y9-jep" secondAttribute="bottom" constant="20" id="DO6-6V-gYN"/>
                             <constraint firstItem="b9C-U7-sDR" firstAttribute="trailing" secondItem="3w6-NE-E0l" secondAttribute="trailing" constant="-20" id="agY-rZ-iKA"/>
                             <constraint firstItem="b9C-U7-sDR" firstAttribute="leading" secondItem="3w6-NE-E0l" secondAttribute="leading" constant="20" id="gmM-Qo-PGi"/>
-                            <constraint firstItem="VAI-rt-hTa" firstAttribute="top" secondItem="b9C-U7-sDR" secondAttribute="bottom" constant="20" id="pQC-K4-Xea"/>
+                            <constraint firstItem="3w6-NE-E0l" firstAttribute="trailing" secondItem="CKS-40-5pe" secondAttribute="trailing" constant="20" id="kMT-M1-qoC"/>
+                            <constraint firstItem="NF9-Y9-jep" firstAttribute="trailing" secondItem="b9C-U7-sDR" secondAttribute="trailing" id="m7X-zZ-Pv0"/>
+                            <constraint firstItem="NF9-Y9-jep" firstAttribute="top" secondItem="b9C-U7-sDR" secondAttribute="bottom" constant="20" id="nay-K4-j11"/>
+                            <constraint firstItem="b9C-U7-sDR" firstAttribute="top" secondItem="CKS-40-5pe" secondAttribute="bottom" constant="26" id="rEp-B1-TUR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3w6-NE-E0l"/>
                     </view>
                     <navigationItem key="navigationItem" id="xcK-7t-TuF">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gxM-eX-ovb"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gxM-eX-ovb">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="hZc-UI-wIr" id="abj-3D-lSW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="recordButton" destination="NF9-Y9-jep" id="Qdd-Iv-4Wl"/>
                         <outlet property="textview" destination="b9C-U7-sDR" id="Xn7-Se-J3X"/>
+                        <outlet property="transcriptTitle" destination="rky-Cw-3DJ" id="HlM-og-dr4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n6Z-Eh-4Q8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

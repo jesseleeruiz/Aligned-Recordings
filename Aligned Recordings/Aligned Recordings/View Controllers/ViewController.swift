@@ -13,8 +13,8 @@ import CoreData
 class ViewController: UIViewController {
     
     // MARK: - Properties
+    let transcript = Transcript()
     let transcriptController = TranscriptController()
-    var array: [String] = ["Meet with Jen", "Conference Call", "1:1 with Tyler"]    
     
     lazy var fetchedResultsController: NSFetchedResultsController<Transcript> = {
         let fetchRequest: NSFetchRequest<Transcript> = Transcript.fetchRequest()
@@ -65,9 +65,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return fetchedResultsController.sections?[section].numberOfObjects ?? 0
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return fetchedResultsController.sections?.count ?? 0
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Transcript", for: indexPath)
-        cell.textLabel?.text = array[indexPath.row]
+        
+        cell.textLabel?.text = fetchedResultsController.object(at: indexPath).title
+        cell.detailTextLabel?.text = "Created on \(transcript.date?.convertToDisplayFormat() ?? "")"
+        
         return cell
     }
     
