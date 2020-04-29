@@ -20,12 +20,12 @@ class AddTranscriptViewController: UIViewController, SFSpeechRecognizerDelegate 
     // MARK: - Outlets
     @IBOutlet weak var textview: UITextView!
     @IBOutlet weak var recordButton: UIButton!
-    @IBOutlet weak var importButton: UIButton!
     
     // MARK: - View Controller Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         recordButton.isEnabled = false
+        recordButton.layer.cornerRadius = 16
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,13 +40,16 @@ class AddTranscriptViewController: UIViewController, SFSpeechRecognizerDelegate 
                     
                 case .denied:
                     self.recordButton.isEnabled = false
+                    self.recordButton.setTitle("User denied access to speech recognition", for: .disabled)
                     
                 case .restricted:
                     self.recordButton.isEnabled = false
+                    self.recordButton.setTitle("Speech recognition restricted on this device", for: .disabled)
                     
                 case .notDetermined:
                     self.recordButton.isEnabled = false
-                    
+                    self.recordButton.setTitle("Speech recognition not yet authorized", for: .disabled)
+
                 default:
                     self.recordButton.isEnabled = false
                 }
@@ -87,6 +90,7 @@ class AddTranscriptViewController: UIViewController, SFSpeechRecognizerDelegate 
                 self.recognitionRequest = nil
                 self.recognitionTask = nil
                 self.recordButton.isEnabled = true
+                self.recordButton.setTitle("Start Recording", for: [])
             }
         }
         
@@ -105,8 +109,10 @@ class AddTranscriptViewController: UIViewController, SFSpeechRecognizerDelegate 
     public func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
         if available {
             recordButton.isEnabled = true
+            recordButton.setTitle("Start Recording", for: [])
         } else {
             recordButton.isEnabled = false
+            recordButton.setTitle("Recognition Not Availalbe", for: .disabled)
         }
     }
     
@@ -124,10 +130,6 @@ class AddTranscriptViewController: UIViewController, SFSpeechRecognizerDelegate 
                 recordButton.setTitle("Unavailable", for: [])
             }
         }
-    }
-    
-    @IBAction func importButtonPressed(_ sender: UIButton) {
-        
     }
 
     /*

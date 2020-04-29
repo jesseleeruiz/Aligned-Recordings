@@ -73,7 +73,7 @@
                                 <rect key="frame" x="20" y="796.5" width="374" height="45.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF9-Y9-jep">
-                                        <rect key="frame" x="0.0" y="0.0" width="168.5" height="45.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="45.5"/>
                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration" hint="Start recording your voice" label="Record Audio"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,25 +86,7 @@
                                             <action selector="recordButtonPressed:" destination="hZc-UI-wIr" eventType="touchUpInside" id="VXe-GU-ZQK"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhy-x3-ycw">
-                                        <rect key="frame" x="208.5" y="0.0" width="165.5" height="45.5"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <accessibility key="accessibilityConfiguration" hint="Import an audio file from your phone" label="Import Audio"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="IMPORT" image="square.and.arrow.down.fill" catalog="system">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="21"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="importButtonPressed:" destination="hZc-UI-wIr" eventType="touchUpInside" id="EgV-kI-Kc4"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="NF9-Y9-jep" firstAttribute="width" secondItem="lhy-x3-ycw" secondAttribute="width" multiplier="1.01657" id="Q62-WW-XDb"/>
-                                    <constraint firstItem="lhy-x3-ycw" firstAttribute="leading" secondItem="NF9-Y9-jep" secondAttribute="trailing" constant="40" id="pPx-fd-lOc"/>
-                                </constraints>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b9C-U7-sDR">
                                 <rect key="frame" x="20" y="140" width="374" height="636.5"/>
@@ -129,9 +111,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3w6-NE-E0l"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xcK-7t-TuF"/>
+                    <navigationItem key="navigationItem" id="xcK-7t-TuF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gxM-eX-ovb"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="importButton" destination="lhy-x3-ycw" id="TOJ-Lu-0qh"/>
                         <outlet property="recordButton" destination="NF9-Y9-jep" id="Qdd-Iv-4Wl"/>
                         <outlet property="textview" destination="b9C-U7-sDR" id="Xn7-Se-J3X"/>
                     </connections>
@@ -256,6 +239,5 @@
         <image name="mic.fill" catalog="system" width="108" height="128"/>
         <image name="play.circle.fill" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
     </resources>
 </document>
