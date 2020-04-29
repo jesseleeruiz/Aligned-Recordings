@@ -15,8 +15,6 @@ class TranscriptDetailViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var pickerView: UIPickerView!
-    @IBOutlet weak var exportButton: UIButton!
     
     
     // MARK: - Lifecycle
@@ -30,9 +28,10 @@ class TranscriptDetailViewController: UIViewController {
         
     }
     
-    @IBAction func exportButtonPressed(_ sender: UIButton) {
+    @IBAction func shareButtonPressed(_ sender: UIBarButtonItem) {
         
     }
+    
     
     // MARK: - Methods
 
