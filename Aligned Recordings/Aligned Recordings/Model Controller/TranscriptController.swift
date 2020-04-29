@@ -51,7 +51,8 @@ class TranscriptController {
         let data = renderer.pdfData { (context) in
             context.beginPage()
             
-            
+            let titleBottom = configureTitle(pageRect: pageRect)
+            configureBodyText(pageRect: pageRect, textTop: titleBottom + 18.0)
         }
         
         return data
